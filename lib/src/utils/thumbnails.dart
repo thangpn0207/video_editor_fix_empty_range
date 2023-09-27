@@ -19,7 +19,7 @@ Stream<List<Uint8List>> generateTrimThumbnails(
         imageFormat: ImageFormat.JPEG,
         video: path,
         timeMs: (eachPart * i).toInt(),
-        quality: controller.trimThumbnailsQuality,
+        quality: 5,
       );
       if (bytes != null) {
         byteList.add(bytes);
