@@ -5,6 +5,7 @@ import 'package:video_editor/src/utils/thumbnails.dart';
 import 'package:video_editor/src/models/cover_data.dart';
 import 'package:video_editor/video_editor.dart';
 import 'package:video_player/video_player.dart';
+import 'package:video_player_media_kit/video_player_media_kit.dart';
 
 class VideoMinDurationError extends Error {
   final Duration minDuration;
@@ -151,6 +152,20 @@ class VideoEditorController extends ChangeNotifier {
     if (preferredCropAspectRatio == value) return;
     _preferredCropAspectRatio = value;
     notifyListeners();
+  }
+
+  // --------------------------------------------------
+  // Make sure to add the respective packages to pubspec.yaml. e.g.
+  //
+  // dependencies:
+  //   media_kit_libs_macos_video: any
+  //   media_kit_libs_windows_video: any
+  //   media_kit_libs_linux: any
+  Future<void> ensureInitialized() async {
+    VideoPlayerMediaKit.ensureInitialized(
+      android: true,
+      iOS: true,
+    );
   }
 
   /// Set [preferredCropAspectRatio] to the current cropped area ratio
