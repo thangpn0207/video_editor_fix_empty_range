@@ -20,7 +20,8 @@ dependencies:
   transparent_image: ^2.0.1 # show fade-in placeholder in thumbnails generation
   video_compress: ^3.1.2
   video_player_media_kit: ^1.0.5
-
+  media_kit_libs_android_video: any
+  media_kit_libs_ios_video: any
 
 dev_dependencies:
   flutter_test:
