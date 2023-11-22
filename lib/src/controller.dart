@@ -216,6 +216,7 @@ class VideoEditorController extends ChangeNotifier {
   /// }, test: (e) => e is VideoMinDurationError);
   /// ```
   Future<void> initialize({double? aspectRatio}) async {
+    await ensureInitialized();
     await _video.initialize();
 
     if (minDuration > videoDuration) {
