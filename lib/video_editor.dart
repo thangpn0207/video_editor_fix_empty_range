@@ -11,3 +11,4 @@ export 'src/widgets/crop/crop_grid.dart';
 export 'src/models/file_format.dart' hide FileFormat;
 export 'src/widgets/trim/trim_slider.dart';
 export 'src/widgets/trim/trim_timeline.dart';
+export 'src/config.dart';
