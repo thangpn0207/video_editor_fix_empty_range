@@ -13,7 +13,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  video_player: 2.6.1
+  video_player: ^2.6.1
 
   path: ^1.8.0 # update to `1.8.1` causes #79
   path_provider: ^2.0.12
@@ -22,7 +22,8 @@ dependencies:
   video_player_media_kit: 1.0.5
   media_kit_libs_android_video: any
   media_kit_libs_ios_video: any
-
+dependency_overrides:
+  video_player: 2.6.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
